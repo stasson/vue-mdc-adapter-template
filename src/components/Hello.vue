@@ -4,14 +4,18 @@
 		</mdc-layout-cell>
 		<mdc-layout-cell span=12>
 			<mdc-card>
+
 				<mdc-card-media>
-					<mdc-grid-list>
-						<mdc-grid-tile :src="mdcLogo"/>
-						<mdc-grid-tile :src="vueLogo"/>
-						<mdc-grid-tile :src="vmaLogo"/>
-					</mdc-grid-list>
-					<mdc-card-header :title="title" :subtitle="subtitle" />
+					<div class="banner" style="margin:auto">
+						<mdc-grid-list width="120">
+							<mdc-grid-tile :src="mdcLogo"/>
+							<mdc-grid-tile :src="vueLogo"/>
+							<mdc-grid-tile :src="vmaLogo"/>
+						</mdc-grid-list>
+					</div>
 				</mdc-card-media>
+
+				<mdc-card-header :title="title" :subtitle="subtitle" />
 
 
 				<mdc-card-text>
