@@ -1,74 +1,66 @@
 <template>
-	<div class="hello">
-		<mdc-button raised>Hello</mdc-button>
-		<mdc-display>{{ msg }}</mdc-display>
-		<h2>Essential Links</h2>
-		<ul>
-			<li>
-				<a href="https://vuejs.org" target="_blank">Core Docs</a>
-			</li>
-			<li>
-				<a href="https://forum.vuejs.org" target="_blank">Forum</a>
-			</li>
-			<li>
-				<a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/vuejs" target="_blank">Twitter</a>
-			</li>
-			<br>
-			<li>
-				<a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a>
-			</li>
-		</ul>
-		<h2>Ecosystem</h2>
-		<ul>
-			<li>
-				<a href="http://router.vuejs.org/" target="_blank">vue-router</a>
-			</li>
-			<li>
-				<a href="http://vuex.vuejs.org/" target="_blank">vuex</a>
-			</li>
-			<li>
-				<a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a>
-			</li>
-			<li>
-				<a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a>
-			</li>
-		</ul>
-	</div>
+	<mdc-layout-grid class="content">
+		<mdc-layout-cell span=12>
+		</mdc-layout-cell>
+		<mdc-layout-cell span=12>
+			<mdc-card>
+				<mdc-card-media>
+					<mdc-grid-list>
+						<mdc-grid-tile :src="mdcLogo"/>
+						<mdc-grid-tile :src="vueLogo"/>
+						<mdc-grid-tile :src="vmaLogo"/>
+					</mdc-grid-list>
+					<mdc-card-header :title="title" :subtitle="subtitle" />
+				</mdc-card-media>
+
+
+				<mdc-card-text>
+					<p><em>vue-mdc-adapter</em> is an integration of
+					<a href="https://material.io/components/web/">Material Components</a>
+					for <a href="https://vuejs.org">Vue.js</a> which follows best practices
+					recommended by Google:
+					<a href="https://github.com/material-components/material-components-web/blob/master/docs/integrating-into-frameworks.md#the-advanced-approach-using-foundations-and-adapters">Using Foundations and Adapters</a>.
+					The project aims at finding the right balance between ease of use and customization, while sticking to the <em>Vue Spirit</em> (approachable, versatile, performant)</p>					 
+				</mdc-card-text> 
+				<mdc-card-actions>
+					<mdc-card-action-button 
+						v-for="action in actions" :key="action.name"
+						:href="action.href" 
+					>{{ action.name }}</mdc-card-action-button>
+				</mdc-card-actions>
+				</mdc-card>
+		</mdc-layout-cell>
+	</mdc-layout-grid>
 </template>
 
 <script>
-	export default {
+import mdcLogo from '../assets/mdc-logo.png'
+import vueLogo from '../assets/vue-logo.png'
+import vmaLogo from '../assets/vma-logo.png'
+
+export default {
   name: 'hello',
   data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+	return {
+		vueLogo,
+		mdcLogo,
+		vmaLogo,
+		title: 'Welcome to your MDC-Vue App',
+		subtitle: 'Material Components for Vue.js',
+		actions: [
+			{name: 'Getting Started', href: 'https://stasson.github.io/vue-mdc-adapter/#/docs/getting-started'},
+		]
+	}
   }
 }
-
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-	h1,
-	h2 {
-		font-weight: normal;
-	}
-
-	ul {
-		list-style-type: none;
-		padding: 0;
-	}
-
-	li {
-		display: inline-block;
-		margin: 0 10px;
-	}
-
-	a {
-		color: #42b983;
-	}
+.content {
+	padding: 32px;
+	min-width: 100px;
+	max-width: 800px;
+	margin: auto;
+}
 </style>
+

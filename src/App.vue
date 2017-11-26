@@ -1,23 +1,21 @@
 <template>
-	<div id="app">
-		<img width=200 src="./assets/vue-logo.png">
-		<router-view></router-view>
-	</div>
+	<mdc-layout-app id="app">
+		<toolbar slot="toolbar"/>
+		<drawer slot="drawer"/>
+		<main>
+			<router-view />
+		</main>		
+	</mdc-layout-app>
 </template>
 
 <script>
+	import Toolbar from './components/Toolbar'
+	import Drawer from './components/Drawer'
+
 	export default {
-    name: 'app'
+	name: 'app',
+	components:{
+		Toolbar, Drawer
+	}
   }
 </script>
-
-<style>
-	#app {
-		font-family: 'Avenir', Helvetica, Arial, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
-		color: #2c3e50;
-		margin-top: 60px;
-	}
-</style>
