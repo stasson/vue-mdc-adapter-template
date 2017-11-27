@@ -3,9 +3,9 @@
   "description": null,
   "version": "0.0.5",
   "dependencies": {
-    "vue-router": "^3.0.1",
-    "vue-mdc-adapter": "^0.4.1",
-    "vue": "^2.5.3"
+    "vue": "^2.5.3",
+    "vue-mdc-adapter": "^0.4.2",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
