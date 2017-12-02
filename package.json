@@ -1,10 +1,11 @@
 {
   "name": "vue-mdc-adapter-template",
   "description": null,
-  "version": "0.0.5",
+  "version": "0.6.0",
   "dependencies": {
+    "material-components-web": "^0.26.0",
     "vue": "^2.5.3",
-    "vue-mdc-adapter": "^0.4.2",
+    "vue-mdc-adapter": "^0.6.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
