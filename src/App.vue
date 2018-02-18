@@ -19,11 +19,3 @@
 	}
   }
 </script>
-
-<<style>
-/* :root {
---mdc-theme-primary: #212121;
---mdc-theme-secondary: #41B883;
---mdc-theme-background: #FFFFFF;
-} */
-</style>
