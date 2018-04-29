@@ -22,9 +22,9 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'vue-mdc-adapter': 'vue-mdc-adapter/dist',
       '@': resolve('src'),
     }
+    
   },
   module: {
     rules: [
