@@ -4,20 +4,7 @@
 		</mdc-layout-cell>
 		<mdc-layout-cell span=12>
 			<mdc-card>
-
-				<mdc-card-media>
-					<div class="banner" style="margin:auto">
-						<mdc-grid-list width="120">
-							<mdc-grid-tile :src="mdcLogo"/>
-							<mdc-grid-tile :src="vueLogo"/>
-							<mdc-grid-tile :src="vmaLogo"/>
-						</mdc-grid-list>
-					</div>
-				</mdc-card-media>
-
 				<mdc-card-header :title="title" :subtitle="subtitle" />
-
-
 				<mdc-card-text>
 					<p><em>vue-mdc-adapter</em> is an integration of
 					<a href="https://material.io/components/web/">Material Components</a>
@@ -25,6 +12,13 @@
 					recommended by Google:
 					<a href="https://github.com/material-components/material-components-web/blob/master/docs/integrating-into-frameworks.md#the-advanced-approach-using-foundations-and-adapters">Using Foundations and Adapters</a>.
 					The project aims at finding the right balance between ease of use and customization, while sticking to the <em>Vue Spirit</em> (approachable, versatile, performant)</p>					 
+					<div class="banner" style="margin:auto">
+						<mdc-grid-list width="120">
+							<mdc-grid-tile :src="mdcLogo"/>
+							<mdc-grid-tile :src="vueLogo"/>
+							<mdc-grid-tile :src="vmaLogo"/>
+						</mdc-grid-list>
+					</div>
 				</mdc-card-text> 
 				<mdc-card-actions>
 					<mdc-card-action-button 
